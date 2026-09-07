@@ -27,3 +27,9 @@ img {
 nav ul {
     display: flex;
 }
+
+@media screen and (max-width: 599px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
