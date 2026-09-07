@@ -1,15 +1,103 @@
 /* Michael Barnes - September 7, 2026 */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    grid-area: header;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    grid-area: main;
+    padding: 25px;
 }
 
 #image-flex {
     display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+figure {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 img {
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 10px 5px;
+    font-size: 0.95em;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 @media screen and (min-width: 600px) {
@@ -24,34 +112,27 @@ img {
     }
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-}
-
 @media screen and (max-width: 599px) {
     nav ul {
         flex-direction: column;
+        align-items: center;
     }
-}
 
-nav li {
-    margin: 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-@media screen and (max-width: 599px) {
     nav li {
         margin: 5px;
     }
-}
 
-@media screen and (max-width: 599px) {
+    nav a {
+        display: block;
+    }
+
+    #image-flex {
+        flex-direction: column;
+    }
+
     header {
         text-align: center;
+        padding: 20px 10px;
     }
 
     h1 {
