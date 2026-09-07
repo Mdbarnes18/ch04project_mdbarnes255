@@ -7,3 +7,7 @@ body {
 #image-flex {
     display: flex;
 }
+
+img {
+    width: 100%;
+}
