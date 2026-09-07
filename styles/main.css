@@ -23,3 +23,7 @@ img {
         flex-direction: row;
     }
 }
+
+nav ul {
+    display: flex;
+}
