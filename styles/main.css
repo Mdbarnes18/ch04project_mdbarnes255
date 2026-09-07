@@ -24,6 +24,7 @@ header {
     color: white;
     text-align: center;
     padding: 25px 15px;
+    box-shadow: 0 3px 8px rgba(34, 34, 34, 0.35);
 }
 
 h1 {
@@ -69,6 +70,7 @@ main {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-direction: column;
 }
 
 figure {
