@@ -1,0 +1,9 @@
+/* Michael Barnes - September 7, 2026 */
+
+body {
+    display: grid;
+}
+
+#image-flex {
+    display: flex;
+}
